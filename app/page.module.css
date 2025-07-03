@@ -1,0 +1,521 @@
+
+.dashboard{
+    width: 100%;
+    background-color: #ededed;
+    color: #b46108;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2em;
+    padding: 100px 0px;
+    /* border: 2px dashed #000000; */ /* For development purpose only */
+  }
+  
+  .heading{
+    width: 400px;
+    font-size: 4em;
+    text-align: center;
+  }
+  
+  .begin{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e09646;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+  
+  .begin:hover{
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+  
+  .trainModelSection{
+    padding: 80px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 3em;
+  }
+  
+  .trainModelSubSection{
+    display: flex;
+    color: #0a0a0a;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2em;
+    column-gap: 15em;
+  }
+  
+  .inputBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2em;
+    row-gap: 2em;
+  }
+  
+  .inputBox button{
+    background-color: #0a0a0a;
+    color: #ededed;
+  }
+  
+  .modelDetailsForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2em;
+  }
+  
+  .incDecButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 4px 10px 6px 10px;
+    outline: none;
+    border: none;
+    border-radius: 100%;
+    font-family: inherit;
+    background-color: #e09646;
+    color: #0a0a0a;
+  }
+  
+  .incDecButton:hover{
+    cursor: pointer;
+  }
+  
+  .inputLayer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2em;
+  }
+  
+  .incDecButtonsHolder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+  }
+  
+  .layer{
+    background-color: #0a0a0a;
+    color: #ededed;
+    padding: 20px;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2em;
+    row-gap: 2em;
+  }
+  
+  .inputShapeInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #bdbdbd80; */
+    box-shadow: #7575756e 0px 2px 3px 0px;
+  }
+  
+  .inputShapeInfo h4{
+    text-align: center;
+  }
+  
+  .uploadDatasetSection{
+    padding: 80px;
+  }
+  
+  .datasetUpload{
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2em;
+    width: 40em;
+  }
+  
+  .datasetUploadSubSection{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 2em;
+    row-gap: 2em;
+  }
+  
+  .compileButton, .fitButton, .downloadButton{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e09646;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+  
+  .downloadButton:disabled{
+    background-color: #626262ac;
+  }
+  
+  .compileButton:hover, .fitButton:hover, .downloadButton:hover{
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+  
+  .downloadButton:disabled:hover{
+    cursor: not-allowed;
+  }
+  
+  .uploadButton{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e09646;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: 20px;
+    padding: 15px 30px;
+    width: 250px;
+  }
+  
+  .uploadButton:hover{
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+  
+  .hasHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2em;
+    row-gap: 2em;
+  }
+  
+  .compileModel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    row-gap: 2em;
+  }
+  
+  .codeBlock{
+    display: flex;
+    padding: 2em;
+    width: 50em;
+    height: auto;
+    border-radius: 20px;
+    background: linear-gradient(67deg,#0d1e4d53, #17064964);
+    box-shadow: -1px -1px 7px 0px #fff5;
+    transition: all 0.2 linear;
+    overflow: hidden
+  }
+  
+  .summaryText{
+    display: inline-block;
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+    font-size: 1em;
+  }
+  
+  .dataSetCheckModalTrue{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 30em;
+    padding: 2em;
+    background-color: #e09646;
+    position: fixed;
+    top: 25%;
+  }
+  
+  .InfoModalTrue, .InfoModalTrueGreen, .InfoModalTrueRed, .InfoModalTrueYellow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1em;
+    /* border-radius: 20px; */
+    width: 20em;
+    padding: 2em;
+    background-color: #dce800;
+    color: #0a0a0a;
+    position: fixed;
+    top: 5%;
+    right: 2%;
+  }
+  
+  .InfoModalTrueGreen{
+    background-color: #0d6a18;
+    color: #ededed;
+  }
+  
+  .InfoModalTrueYellow{
+    background-color: #dce800;
+    color: #0a0a0a;
+  }
+  
+  .InfoModalTrueRed{
+    background-color: #9f2411;
+    color: #ededed;
+  }
+  
+  .InfoModalFalse{
+    visibility: hidden;
+    right: -22%;
+  }
+  
+  .infoModalText{
+    color: inherit;
+    width: initial;
+  }
+  
+  .dataSetCheckModalFalse{
+    display: none;
+  }
+  
+  .fitModel, .downloadModel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    row-gap: 2em;
+  }
+  
+  .hyperparameter{
+    display: flex;
+    column-gap: 2em;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .compilationHyperparameters{
+    display: flex;
+    row-gap: 2em;
+    column-gap: 2em;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modelDownloadInfoActive{
+    color: #0d6a18;
+  }
+  
+  .modelDownloadInfoInActive{
+    color: #9f2411;
+  }
+  
+  .modelVisualizer{
+    display: flex;
+    padding: 2em;
+    width: 18em;
+    height: auto;
+    border-radius: 20px;
+    background: linear-gradient(67deg,#0d1e4d53, #17064964);
+    box-shadow: -1px -1px 7px 0px #fff5;
+    transition: all 0.2 linear;
+    overflow: hidden
+  }
+  
+  @media (prefers-color-scheme: dark) {
+  
+    .InfoModalTrue{
+      background-color: #eeed94;
+    }
+  
+    .dataSetCheckModalTrue{
+      background-color: #ededed;
+      color: #0a0a0a;
+    }
+  
+    .dashboard{
+      background-color: #0a0a0a;
+      color: #ededed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* border: 2px dashed #ffffff; */ /* For development purpose only */
+    }
+  
+    .incDecButton{
+      background-color: #b46108;
+      color: #ededed;
+    }
+  
+    .trainModelSubSection{
+      color: #ededed;
+    }
+  
+    .inputBox button{
+      background-color: #b46108;
+      color: #ededed;
+    }
+  
+    .begin{
+      background-color: #b46108;
+    }
+  
+    .layer{
+      background-color: #ededed;
+      color: #0a0a0a;
+    }
+  
+    .inputShapeInfo{
+      box-shadow: #bcbcbc6e 0px 2px 3px 0px;
+    }
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .layer{
+      width: 90%;
+      padding: 2em;
+      border-radius: 60px;
+      font-size: 0.8em;
+    }
+  
+    .trainModelSubSection{
+      flex-direction: column;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+  
+    .layer{
+      width: 90%;
+      padding: 2em;
+      border-radius: 60px;
+      font-size: 0.8em;
+    }
+  
+    .incDecButton{
+      width: 10px;
+      height: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 675px) {
+    .layer{
+      width: 45em;
+      padding: 2em;
+      font-size: 0.6em;
+    }
+  
+    .compilationHyperparameters{
+      flex-direction: column;
+    }
+  
+    .datasetUpload{
+      width: 40em;
+      font-size: 0.8em;
+    }
+  
+    .codeBlock{
+      width: 36em;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .layer{
+      width: 31em;
+      column-gap: 2em;
+      padding: 2em;
+      font-size: 0.7em;
+    }
+  
+    .incDecButton{
+      padding: 0px;
+      height: 15px;
+      width: 15px;
+      font-size: 1em;
+    }
+  
+    .inputShapeInfo{
+      width: 20em;
+    }
+  
+    .datasetUpload{
+      width: 40em;
+      font-size: 0.6em;
+    }
+  
+    .datasetUploadSubSection{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .codeBlock{
+      width: 20em;
+    }
+  
+    .dataSetCheckModalTrue{
+      width: 90%;
+    }
+  
+    .tableWrapper{
+      width: 90%;
+      overflow-x: scroll;
+    }
+  
+    .InfoModalTrue, .InfoModalTrueGreen, .InfoModalTrueRed, .InfoModalTrueYellow{
+      right: 7%;
+      width: 12em;
+      padding: 1em;
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    .heading{
+      font-size: 3em;
+      width: 5em;
+    }
+  
+    .inputShapeInfo{
+      width: 15em;
+    }
+  
+    .layer{
+      width: 30em;
+      font-size: 0.6em;
+      column-gap: 1em;
+    }
+  
+    .hasHeader{
+      width: initial;
+    }
+  
+    .datasetUploadSubSection{
+      width: 25em;
+    }
+  
+    .datasetCheckHeading{
+      width: initial;
+    }
+  }
